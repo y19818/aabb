@@ -15,7 +15,7 @@ xmc_seed_nodes = '193.112.64.213\n111.230.177.177\n118.24.41.27\n123.206.77.55\n
 async def my_event_handler(event):
     if 'Official website' in event.raw_text:
         await event.reply('http://monero-classic.org/')
-    if 'official website' in event.raw_text:
+    #if 'official website' in event.raw_text:
         await event.reply('http://monero-classic.org/')
     if 'xmc github' in event.raw_text:
         await event.reply('https://github.com/monero-classic')
