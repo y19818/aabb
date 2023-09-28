@@ -66,6 +66,108 @@ This pallet ensures the stability and reliability of block intervals and credit 
 
 Each of these pallets plays a pivotal role in maintaining the efficiency, security, and financial integrity of the system, working in tandem to ensure the seamless functioning of the blockchain network.
 
+
+## Installing Substrate Dependencies
+
+Substrate is a modular framework that enables you to create purpose-built blockchains by composing custom or pre-built components. Below is a markdown document that you can use as a template for creating a guide on installing Substrate dependencies.
+### 1. Install Rust
+
+Substrate is developed using Rust; hence, Rust is a prerequisite for Substrate. Install Rust using rustup by running the following command in your terminal:
+
+```sh
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+
+
+After completing the installation, restart your terminal and run:
+
+```sh
+
+source $HOME/.cargo/env
+```
+
+
+
+Or, add the following line to your shell profile file (e.g., `~/.bashrc` or `~/.zshrc`):
+
+```sh
+
+export PATH=$HOME/.cargo/bin:$PATH
+```
+
+
+#### Update Rust
+
+Keep your Rust installation up to date by running:
+
+```sh
+
+rustup update
+```
+
+
+### 2. Install Additional Libraries
+
+Substrate has several library dependencies. Install them using the appropriate commands for your operating system:
+#### For Ubuntu
+
+```sh
+
+sudo apt update
+sudo apt install -y cmake pkg-config libssl-dev git build-essential clang libclang-dev
+```
+
+
+#### For macOS
+
+```sh
+
+brew install cmake pkg-config openssl git llvm
+```
+
+
+### 3. Install Substrate
+
+With Rust and the necessary libraries installed, proceed to install Substrate:
+
+```sh
+
+curl https://getsubstrate.io -sSf | bash -s -- --fast
+```
+
+
+### 4. Verify Installation
+
+Check your Substrate installation by running:
+
+```sh
+
+substrate --version
+```
+
+
+
+This command should output the installed Substrate version.
+### 5. Configure Rust Toolchain
+
+Configure the Rust toolchain for Substrate by running:
+
+```sh
+
+rustup default nightly
+rustup target add wasm32-unknown-unknown --toolchain nightly
+```
+
+
+### Completion
+
+At this point, you should have a working Substrate development environment. Regularly check for updates and keep your installations current by running `rustup update` and `cargo update`.
+
+Remember to replace the placeholder text with the actual content, and feel free to modify the structure and formatting to suit your preferences and requirements.
+
+
 ## Build the Magnet Node
 
 To build Magnet, you will need a proper Substrate development environment.
