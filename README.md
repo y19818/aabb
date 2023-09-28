@@ -34,7 +34,7 @@ mechanism.
 contract services and charges GAS fees as platform fees.
 
 **Polkadot:** Provides high-quality BlockSpace for Magnet and offers
-blockchain security services
+blockchain security services.
 
 ![Diagram of Magnet Operation](https://github.com/y19818/aabb/blob/master/DiagramofMagnetOperation.png)
 
