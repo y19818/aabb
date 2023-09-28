@@ -37,6 +37,8 @@ blockchain security services
 
 ![Diagram of Magnet Operation](https://github.com/y19818/aabb/blob/master/DiagramofMagnetOperation.png)
 
+When providing smart contract platform services to users, Magnet calculates the total GAS fees from the current transaction pool and obtains the expected Blockspace/coretime price from RelayChain. By strategically leveraging the price difference, Magnet achieves continuous profits, thereby serving users more efficiently. Once the GAS fees exceed the expected price, Magnet will delegate Collators to package the transactions and submit a Blockspace Order to the Relaychain, strategically collecting gas fees to pay for coretime. Upon successful ordering, the produced blocks will be anchored to the Relaychain for block confirmation.
+
 ## Magnet pallet introduction
 
 ### Blockspace Ordering Pallet:
