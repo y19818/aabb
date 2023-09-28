@@ -24,15 +24,16 @@
 ### Business Model Introduction
 
 The main roles involved in the business logic are as follows:
-Tanssi Collators: As Magnet will become a ContainerChain in the
+
+**Tanssi:** As Magnet will become a ContainerChain in the
 Tanssi Network, Collators will be elected and supported by the Tanssi
 Network, and Magnet will no longer set up a Collators election
 mechanism.
 
-Magnet: As a smart contract platform, it provides EVM/WASM smart
+**Magnet:** As a smart contract platform, it provides EVM/WASM smart
 contract services and charges GAS fees as platform fees.
 
-Relaychain: Provides high-quality BlockSpace for Magnet and offers
+**Polkadot:** Provides high-quality BlockSpace for Magnet and offers
 blockchain security services
 
 ![Diagram of Magnet Operation](https://github.com/y19818/aabb/blob/master/DiagramofMagnetOperation.png)
