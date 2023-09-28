@@ -39,27 +39,32 @@ blockchain security services
 
 ### Magnet pallet introduction
 
-Blockspace Ordering pallet:
-1. Monitor Pool Gas
-2. Monitor Polkadot CoreTime Price
-3. Bidder Triggered, Transaction Added to Block, Block Production, Block Submission, Block Verification Locked
-4. Gas Fee Revenue Credited to System Account
-5. Invoke Profit Operator
+### Blockspace Ordering Pallet:
 
-Profit Operator pallet:
-1. Confirm CoreTime cost
-2. Calculate Block_Profit
-3. Incremental Era_Cost
-4. Incremental Era_Profit
-5. Profit Distribution (Through incremental Era_Profit value, withdraw profit distribution from system account; negative numbers are not triggered)
-6. Deposit Credit account based on the Incremental Era_Cost Value 
-7. Triggered every era, or Triggered by other module
+This pallet is crucial for managing and monitoring various aspects of blockspace and transaction processing. 
+1. **Monitor Pool Gas:**  Constantly observes the gas in the pool to ensure smooth transaction processing and to avoid any bottlenecks. 
+2. **Monitor Polkadot CoreTime Price:**  Keeps track of the real-time price of Polkadot CoreTime to facilitate accurate and fair bidding. 
+3. **Bidder Triggered, Transaction Added to Block, Block Production, Block Submission, Block Verification Locked:**  This is a multi-step process where a bidder triggers the addition of a transaction to a block. After this, the block goes through production, submission, and a verification lock to ensure integrity and security. 
+4. **Gas Fee Revenue Credited to System Account:**  The revenue generated from gas fees is credited directly to the system account, maintaining a transparent financial flow. 
+5. **Invoke Profit Operator:**  Calls the Profit Operator pallet to confirm CoreTime cost and calculate block profit.
+### Profit Operator Pallet:
 
-Blockspace/Coretime  Assurance Pallet:
-1. Monitor Block Interval Time
-2. Monitor Credit Account Balance
-3. Trigger Order or Profit Distribution Upon Reaching Threshold
+This pallet is responsible for managing profits and costs associated with CoreTime. 
+1. **Confirm CoreTime cost:**  Validates the cost associated with CoreTime to avoid any discrepancies. 
+2. **Calculate Block_Profit:**  Determines the profit derived from each block considering various parameters and metrics. 
+3. **Incremental Era_Cost:**  Calculates the incremental cost associated with each era to manage financial flow effectively. 
+4. **Incremental Era_Profit:**  Computes the incremental profit for each era, providing a clear information of financial gains. 
+5. **Profit Distribution:**  Distributes the profit based on the incremental Era_Profit value, withdrawing it from the system account. Negative numbers are not triggered to avoid financial discrepancies. 
+6. **Deposit Credit account based on the Incremental Era_Cost Value:**  Credits the account based on the calculated incremental Era_Cost value, ensuring financial accuracy. 
+7. **Triggered every era, or Triggered by other module:**  This pallet is invoked at every era or can be triggered by another module when needed.
+### Blockspace/Coretime Assurance Pallet:
 
+This pallet ensures the stability and reliability of block intervals and credit account balances. 
+1. **Monitor Block Interval Time:**  Observes the time intervals between blocks to maintain a consistent and efficient block production rate. 
+2. **Monitor Credit Account Balance:**  Keeps a close watch on the credit account balance to avoid any financial irregularities or issues. 
+3. **Trigger Order or Profit Distribution Upon Reaching Threshold:**  Initiates order or profit distribution processes once a certain threshold is reached, ensuring smooth and timely operations.
+
+Each of these pallets plays a pivotal role in maintaining the efficiency, security, and financial integrity of the system, working in tandem to ensure the seamless functioning of the blockchain network.
 
 ## Build the Magnet Node
 
