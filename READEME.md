@@ -37,7 +37,7 @@ blockchain security services
 
 ![Diagram of Magnet Operation](https://github.com/y19818/aabb/blob/master/DiagramofMagnetOperation.png)
 
-### Magnet pallet introduction
+## Magnet pallet introduction
 
 ### Blockspace Ordering Pallet:
 
